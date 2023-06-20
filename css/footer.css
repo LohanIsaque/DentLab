@@ -1,0 +1,60 @@
+footer{
+  background-color: var(--cor-fundo-footer);
+  height: 250px;
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+ }
+
+ .info{
+  grid-column: 3/6;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+ }
+
+ .Navegacao{
+  grid-column: 6/8;
+  grid-row: 2/3;
+  display:flex;
+  flex-direction: column;
+  gap: 24px;
+ }
+
+ .Servicos{
+  grid-column: 9/11;
+  grid-row: 2/3;
+  display:flex;
+  flex-direction: column;
+  gap: 24px;
+ }
+
+.linha{
+  grid-row: 3;
+  grid-column: 2/12;
+  width: 100%;
+  border: none;
+  border-top: 2px solid white;
+
+}
+
+.Endereco, .Telefone{
+  color: white;
+  font-family: var(--texto);
+  font-weight: 400;
+  font-size: 20px;
+}
+
+@media (max-width: 900px){
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: autop;
+  }
+  .Navegacao, .Servicos, .linha{
+    display: none;
+  }
+}
